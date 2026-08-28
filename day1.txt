@@ -1,0 +1,136 @@
+MySQL Intro
+-----------
+-----------
+
+
+FullStack -> FrontEnd -> BackEnd
+--------------------------------
+--------------------------------
+
+FrontEnd - front end is the visual and interaction layer of a website or application that users see directly and interact through a web browser or mobile app.
+
+Responsibilities of frontend - 
+1. Display webpages and user interface(UI).
+2. accept user input(forms, buttons, search boxes)
+3. validate user input before sending to the server.
+4. call backend APIs to fetch or send data.
+5. Display the response received from the backend.
+6. provides animations and interactive effects.
+
+BackEnd - backend is the server side part of an application.
+Users cannot see directly, but it performs all business logic, security, data processing and database operations.
+It acts as brain of the application.
+
+Responsibilities of backend - 
+1. process client requests
+2. implements business logic
+3. connects with databases
+4. performs CRUD operations
+5. authenticates and authorize users ***
+6. encrypts passwords and sensitive data ***
+7. generate reports
+8. send emails and notifications
+9. handles file uploads and downloads
+10. returns response to the client
+
+--------------------------------------------------------------------------------------------------------------------
+
+API
+---
+---
+Application Programming Interface -  An API is an set of rules and protocols, that allows two different application or systems to communicate and data exchange without exposing their internal implementation.
+It act as an bridge between frontend and backend or two different software systems.
+
+--------------------------------------------------------------------------------------------------------------------
+
+Storage Area
+------------
+------------
+As part of our applications, we required to store some data like customer information, billing information, calls information, etc.
+To store these data we require storage areas
+
+there are two types of storage areas:
+1. temporary storage areas - these are the memory areas where the data will be stored temporarily.
+eg: All JVM memory areas(HEAP, STACK), once JVM is shutdown, all the memory areas will be cleared automatically.
+
+2. permanent storage areas - also known as persistent storage areas, here we can store data permanently.
+eg: file systems, databases, data warehouse, big data, etc.
+
+-------------------------------------------------------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+File Management System(FMS)
+----------------------------
+----------------------------
+Definition : A file management system is a where data is stored in files on the operating systems.
+each application program must handle its own storage data, retrieval and updating. File systems can be provided by the local operating systems.
+File Systems are best suitable for to store very less amount of information like KB.
+
+eg: a library management system storing books in separate text files like, books.txt, members.txt.
+
+Limitations of FMS -
+--------------------
+1. data redundancy - same data stored in multiple files
+2. data inconsistency - updates in one file may not be reflected in another.
+3. Poor data security - no proper accessed control.
+4. difficult data retrieval - searching requires custom programs.
+5. integrity issues - it don't contains (eg: roll number is uniqueness)
+6. scalability issues - hard to manage as data increases or grows.
+
+
+To overcome the above problems of FMS we use databases.
+
+----------------------------------------------------------------------------------------------------------------------------------
+
+Data Base Management Systems(DBMS)
+----------------------------------
+----------------------------------
+A DBMS is a collection of programs that enables users to create, manage and manipulate databases.
+
+Advantages over FMS - 
+-------------------
+1. we can store huge amount of information in databases.
+2. Query language support is available for every database, hence we can perform database operations easily.
+3. to access data which is present in the database, compulsory username and password is required because data is secured.
+
+Limitations -
+------------
+1. database cannot store huge amount of information like terabytes of data(1000 GB).
+2. database can provide support for only structured data (tabular data or relational data) and cannot provide support for semi structured data like (xml files) and audios and videos.
+
+-----------------------------------------------------------------------------------------------------------------------------------
+
+FMS vs DBMS (Interview Question)
+--------------------------------
+1. data is stored in separate files             |           1. data is stored in structured database
+2. high data redundancy(duplicate data)         |           2. reduces data redundancy
+3. difficult to maintain and update             |           3. easy to maintain and update
+4. security is limited                          |           4. providing strong security mechanism
+5. data sharing is difficult                    |           5. multiple users can access data simultaneously
+6. no relationships between files               |           6. support relationships between tables
+7. backup and recovery is difficult             |           7. provides backup and recovery features
+8. suitable for small applications              |           8. suitable for small, medium, and large applications
+
+
+
+What is the difference between a File Management System and a DBMS?(IQ)
+------------------------------------------------------------------------
+A file management system stores data in separate files and may lead to data redundancy, and security issues. A DBMS stores data in structured manner using tables, reduces redundancy, provides security, supports multiples users, and ensures data consistency and integrity.
+----------------------------------------------------------------------------------------------------------------------------------------------
+
+
+What is data, field, record, database?
+---------------------------------------
+data - raw facts or figures without context
+eg: 101, bannu, 60000, python
+
+field - smallest unit of data in a database(column?attribute)
+eg: eno, ename, esal, edept
+
+record - collection of related fields(row/tuple)
+eg: (101, "bannu", 80000, "python)
+
+database: organized collection of related records stored together
+eg: an employee database containing all employee records.
